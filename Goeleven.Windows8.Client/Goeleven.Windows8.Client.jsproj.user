@@ -3,6 +3,6 @@
   <PropertyGroup>
     <ReferenceCachePath>C:\Users\krennen\AppData\Local\Temp\Goeleven.Windows8.Client_refcache</ReferenceCachePath>
     <ShowAllFiles>true</ShowAllFiles>
-    <AutoRefresh>false</AutoRefresh>
+    <AutoRefresh>true</AutoRefresh>
   </PropertyGroup>
 </Project>

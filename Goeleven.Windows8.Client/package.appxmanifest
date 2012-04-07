@@ -1,49 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-
-  <Identity
-    Name="cb92a1fe-64cb-40aa-87f1-d535335843b1"
-    Version="1.0.0.0"
-    Publisher="CN=krennen" />
-
+  <Identity Name="cb92a1fe-64cb-40aa-87f1-d535335843b1" Version="1.0.0.0" Publisher="CN=krennen" />
   <Properties>
-    <DisplayName>Goeleven.Windows8.Client</DisplayName>
+    <DisplayName>Goe Leven</DisplayName>
     <Description>Goeleven.Windows8.Client</Description>
-    <PublisherDisplayName>krennen</PublisherDisplayName>
+    <PublisherDisplayName>Goeleven</PublisherDisplayName>
     <Logo>images\storelogo.png</Logo>
   </Properties>
-
   <Prerequisites>
     <OSMinVersion>6.2</OSMinVersion>
     <OSMaxVersionTested>6.2</OSMaxVersionTested>
   </Prerequisites>
-
   <Resources>
     <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application 
-      Id="App"
-      StartPage="default.html">
-
-      <VisualElements
-        DisplayName="Goeleven.Windows8.Client"
-        Logo="images\logo.png"
-        SmallLogo="images\smalllogo.png"
-        Description="Goeleven.Windows8.Client"
-        ForegroundText="dark"
-        BackgroundColor="#FFFFFF">
-
-        <DefaultTile ShowName="allLogos" />
-        <SplashScreen Image="images\splashscreen.png" />
-
+    <Application Id="App" StartPage="default.html">
+      <VisualElements DisplayName="Goe Leven" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="Goe Leven" ForegroundText="light" BackgroundColor="orange" ToastCapable="true">
+        <LockScreen Notification="badgeAndTileText" BadgeLogo="images\badge.png" />
+        <DefaultTile ShowName="logoOnly" WideLogo="images\logowide.jpg" ShortName="Goe Leven" />
+        <SplashScreen Image="images\splashscreen.png" BackgroundColor="orange" />
       </VisualElements>
     </Application>
   </Applications>
-
   <Capabilities>
     <Capability Name="internetClient" />
+    <DeviceCapability Name="location" />
   </Capabilities>
-
 </Package>

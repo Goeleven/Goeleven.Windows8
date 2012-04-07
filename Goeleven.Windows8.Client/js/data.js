@@ -71,9 +71,14 @@
         list.push(item);
     });
 
+
+
+
+
     WinJS.Namespace.define("data", {
         items: groupedItems,
         groups: groupedItems.groups,
         getItemsFromGroup: getItemsFromGroup
     });
+
 })();

@@ -60,11 +60,13 @@
     <Content Include="html\groupDetailPage.html" />
     <Content Include="html\itemDetailPage.html" />
     <Content Include="html\dashboard.html" />
+    <Content Include="images\badge.png" />
     <Content Include="images\brew.jpg" />
     <Content Include="images\diy.jpg" />
     <Content Include="images\domotics.jpg" />
     <Content Include="images\goeleven.jpg" />
     <Content Include="images\logo.png" />
+    <Content Include="images\logowide.jpg" />
     <Content Include="images\mercury.jpg" />
     <Content Include="images\nore.jpg" />
     <Content Include="images\plants.jpg" />
@@ -76,6 +78,7 @@
     <Content Include="images\wendy.jpg" />
     <Content Include="js\groupDetailPage.js" />
     <Content Include="js\default.js" />
+    <Content Include="js\liveTileUpdater.js" />
     <Content Include="js\navigator.js" />
     <Content Include="js\data.js" />
     <Content Include="js\itemDetailPage.js" />
