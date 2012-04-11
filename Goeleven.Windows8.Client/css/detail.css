@@ -1,0 +1,114 @@
+﻿.detail section[role=main] {
+    display: block;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+
+    .detail section[role=main] article {
+        width: calc(100% - 240px);
+        height: calc(100% - 50px);
+        margin-left: 120px;
+        margin-right: 120px;
+    }
+
+        .detail section[role=main] article header .item-title {
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .detail section[role=main] article header .item-subtitle {
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .detail section[role=main] article .item-image {
+            height: 240px;
+            margin-bottom: 3px;
+            width: 460px;
+        }
+
+        .detail section[role=main] article .item-content p {
+            margin-bottom: 20px;
+            margin-right: 20px;
+            vertical-align: baseline;
+        }
+
+.detail .item {
+     float: left;
+     height: calc(100% - 100px);
+    
+}
+
+.detail .workbench {
+     float: left;
+     height: calc(100% - 50px);
+}
+
+.detail .todo {
+      border: solid 1px gray;   
+      float:  left;
+      height: 100%;
+      width: 200px;
+      margin-left:  80px;
+}
+
+.detail .progress {
+      border: solid 1px gray;   
+      float:  left;
+      height: 100%;
+      width: 200px;
+      margin-left:  80px;
+}
+
+.detail .done {
+      border: solid 1px gray;
+      float:  left;
+      height: 100%;
+      width: 200px;
+      margin-left:  80px;
+}
+
+.detail .workbench span{
+    font-weight: bolder;
+    text-align: center;
+    display: block;
+}
+
+.drag { cursor: move; }
+.task{ text-align: center; min-height: 60px; background-color: orange; margin-bottom: 10px; padding: 20px; border: 1px solid orange; word-wrap: break-word; }
+.task span{ -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; }
+
+#ghost { width: 200px; background-color: orange; 	color: Black;}
+
+
+@media screen and (-ms-view-state: snapped) {
+    .detail section[role=main] article {
+        /* Define a single column, vertically scrolling article in snapped mode. */
+        -ms-grid-columns: 300px 1fr;
+        -ms-grid-row: 2;
+        -ms-grid-rows: auto 60px;
+        display: -ms-grid;
+        height: 100%;
+        margin-left: 20px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 300px;
+    }
+
+        .detail section[role=main] article .item-image {
+            height: 140px;
+            width: 280px;
+        }
+
+        .detail section[role=main] article .item-content {
+            padding-bottom: 60px;
+        }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .detail section[role=main] article {
+        margin-left: 100px;
+    }
+}

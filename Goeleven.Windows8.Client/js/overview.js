@@ -7,7 +7,7 @@
     var group;
     var items;
 
-    ui.Pages.define("/html/groupDetailPage.html", {
+    ui.Pages.define("/html/overview.html", {
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
         ready: function (element, options) {
@@ -45,7 +45,7 @@
 
         itemInvoked: function (eventObject) {
             var item = items.getAt(eventObject.detail.itemIndex);
-            nav.navigate("/html/itemDetailPage.html", { item: item });
+            nav.navigate("/html/detail.html", { item: item });
         }
     });
 })();

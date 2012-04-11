@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>itemDetailPage</title>
+    <title>todo</title>
     
     <!-- WinJS references -->
     <link href="//Microsoft.WinJS.0.6/css/ui-light.css" rel="stylesheet">
@@ -10,14 +10,17 @@
     <script src="//Microsoft.WinJS.0.6/js/ui.js"></script>
 
     <link href="/css/default.css" rel="stylesheet">
-    <link href="/css/itemDetailPage.css" rel="stylesheet">
+    <link href="/css/detail.css" rel="stylesheet">
+    <script src="/js/jquery-1.6.4.min.js"></script>
+    <script src="/js/jquery-ui-1.8.16.min.js"></script>
+    <script src="/js/goeleven.mobiledragdrop.js"></script>
     <script src="/js/data.js"></script>
     <script src="/js/liveTileUpdater.js"></script>
-    <script src="/js/itemDetailPage.js"></script>
+    <script src="/js/detail.js"></script>
 </head>
 <body>
     <!-- The content that will be loaded and displayed. -->
-    <div class="itemdetailpage fragment">
+    <div class="detail fragment">
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled></button>
             <h1 class="titlearea win-type-ellipsis">
@@ -26,15 +29,31 @@
         </header>
         <section aria-label="Main content" role="main">
             <article>
-                <div>
+                <div class="item">
                     <header>
                         <h2 class="item-title"></h2>
                         <h4 class="item-subtitle"></h4>
                     </header>
-                    <img class="item-image" src="#" />
-                    <div class="item-content"></div>
+                    <img class="item-image" src="#" />                    
+                </div>
+                <div class="workbench">
+                    <div class="todo drop">
+                        <span>TODO</span>
+
+                        <div class="drag task"><span>Auto wassen</span></div>
+
+                    </div>
+                    <div class="progress drop">
+                        <span>IN PROGRESS</span>
+
+                    </div>
+                    <div class="done drop">
+                        <span>DONE</span>
+
+                    </div>
                 </div>
             </article>
+            
         </section>
     </div>
 </body>

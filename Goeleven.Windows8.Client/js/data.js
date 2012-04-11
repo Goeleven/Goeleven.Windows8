@@ -14,11 +14,11 @@
     // Each of these sample groups must have a unique key to be displayed
     // separately.
     var sampleGroups = [
-        { key: "group1", title: "Next Actions", subtitle: "Group Subtitle: 1", backgroundImage: darkGray, description: groupDescription },
-        { key: "group2", title: "Family", subtitle: "Group Subtitle: 2", backgroundImage: lightGray, description: groupDescription },
-        { key: "group3", title: "Organize", subtitle: "Group Subtitle: 3", backgroundImage: mediumGray, description: groupDescription },
-        { key: "group4", title: "Projects", subtitle: "Group Subtitle: 4", backgroundImage: lightGray, description: groupDescription },
-        { key: "group5", title: "Store", subtitle: "Group Subtitle: 5", backgroundImage: mediumGray, description: groupDescription }
+        { key: "group1", title: "overview", subtitle: "Group Subtitle: 1", backgroundImage: "http://cdn.goeleven.com/images/minlivingroom.jpg", description: groupDescription },
+        { key: "group2", title: "Family", subtitle: "Group Subtitle: 2", backgroundImage: "/images/rune.jpg", description: groupDescription },
+        { key: "group3", title: "Organize", subtitle: "Group Subtitle: 3", backgroundImage: "http://cdn.goeleven.com/images/mintoday.jpg", description: groupDescription },
+        { key: "group4", title: "Projects", subtitle: "Group Subtitle: 4", backgroundImage: "http://cdn.goeleven.com/images/minprojects.jpg", description: groupDescription },
+        { key: "group5", title: "Store", subtitle: "Group Subtitle: 5", backgroundImage: "http://cdn.goeleven.com/images/minstore.jpg", description: groupDescription }
     ];
 
     // Each of these sample items should have a reference to a particular
@@ -65,15 +65,11 @@
     var list = new WinJS.Binding.List();
     var groupedItems = list.createGrouped(groupKeySelector, groupDataSelector);
 
-    // TODO: Replace the data with your real data.
+    // overview: Replace the data with your real data.
     // You can add data from asynchronous sources whenever it becomes available.
     sampleItems.forEach(function (item) {
         list.push(item);
     });
-
-
-
-
 
     WinJS.Namespace.define("data", {
         items: groupedItems,

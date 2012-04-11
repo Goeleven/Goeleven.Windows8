@@ -52,13 +52,13 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="default.html" />
-    <Content Include="css\groupDetailPage.css" />
+    <Content Include="css\overview.css" />
     <Content Include="css\default.css" />
-    <Content Include="css\itemDetailPage.css" />
+    <Content Include="css\detail.css" />
     <Content Include="css\dashboard.css" />
     <None Include="Goeleven.Windows8.Client_TemporaryKey.pfx" />
-    <Content Include="html\groupDetailPage.html" />
-    <Content Include="html\itemDetailPage.html" />
+    <Content Include="html\overview.html" />
+    <Content Include="html\detail.html" />
     <Content Include="html\dashboard.html" />
     <Content Include="images\badge.png" />
     <Content Include="images\brew.jpg" />
@@ -76,12 +76,15 @@
     <Content Include="images\storelogo.png" />
     <Content Include="images\tools.jpg" />
     <Content Include="images\wendy.jpg" />
-    <Content Include="js\groupDetailPage.js" />
+    <Content Include="js\goeleven.mobiledragdrop.js" />
+    <Content Include="js\jquery-1.6.4.min.js" />
+    <Content Include="js\jquery-ui-1.8.16.min.js" />
+    <Content Include="js\overview.js" />
     <Content Include="js\default.js" />
     <Content Include="js\liveTileUpdater.js" />
     <Content Include="js\navigator.js" />
     <Content Include="js\data.js" />
-    <Content Include="js\itemDetailPage.js" />
+    <Content Include="js\detail.js" />
     <Content Include="js\dashboard.js" />
   </ItemGroup>
   <ItemGroup>

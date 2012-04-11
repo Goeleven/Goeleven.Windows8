@@ -1,10 +1,22 @@
-﻿(function () {
+﻿/// <reference path="../js/jquery-1.6.4.min.js" />
+/// <reference path="../js/jquery-ui-1.8.16.min.js" />
+/// <reference path="../js/goeleven.mobile.dragdrop.js" />
+
+(function () {
     "use strict";
 
     var ui = WinJS.UI;
     var utils = WinJS.Utilities;
 
-    ui.Pages.define("/html/itemDetailPage.html", {
+    $(".drag").mobiledraganddrop({
+        targets: ".drop",
+        status: "#status",
+        ondrop: function (element, target) {           
+            element.remove().appendTo(target);
+        }
+    });
+
+    ui.Pages.define("/html/detail.html", {
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
         ready: function (element, options) {
@@ -14,7 +26,7 @@
             element.querySelector("article .item-subtitle").textContent = item.subtitle;
             element.querySelector("article .item-image").src = item.backgroundImage;
             element.querySelector("article .item-image").alt = item.subtitle;
-            element.querySelector("article .item-content").innerHTML = item.content;
+            //element.querySelector("article .item-content").innerHTML = item.content;
         }
     })
 })();

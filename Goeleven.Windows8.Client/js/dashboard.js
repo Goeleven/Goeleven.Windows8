@@ -15,7 +15,7 @@
             return {
                 title: item.group.title,
                 click: function () {
-                    nav.navigate("/html/groupDetailPage.html", { group: item.group });
+                    nav.navigate("/html/overview.html", { group: item.group });
                 }
             }
         },
@@ -29,11 +29,11 @@
             if (appView.value === appViewState.snapped) {
                 // If the page is snapped, the user invoked a group.
                 var group = data.groups.getAt(eventObject.detail.itemIndex);
-                nav.navigate("/html/groupDetailPage.html", { group: group });
+                nav.navigate("/html/overview.html", { group: group });
             } else {
                 // If the page is not snapped, the user invoked an item.
                 var item = data.items.getAt(eventObject.detail.itemIndex);
-                nav.navigate("/html/itemDetailPage.html", { item: item });
+                nav.navigate("/html/detail.html", { item: item });
             }
         },
 
