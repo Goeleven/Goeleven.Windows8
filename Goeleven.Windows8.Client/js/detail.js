@@ -6,16 +6,8 @@
     "use strict";
 
     var ui = WinJS.UI;
-    var utils = WinJS.Utilities;
-
-    $(".drag").mobiledraganddrop({
-        targets: ".drop",
-        status: "#status",
-        ondrop: function (element, target) {           
-            element.remove().appendTo(target);
-        }
-    });
-
+    var utils = WinJS.Utilities;    
+    
     ui.Pages.define("/html/detail.html", {
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
@@ -27,6 +19,20 @@
             element.querySelector("article .item-image").src = item.backgroundImage;
             element.querySelector("article .item-image").alt = item.subtitle;
             //element.querySelector("article .item-content").innerHTML = item.content;
+
+            $(".drag").mobiledraganddrop({
+                targets: ".drop",
+                status: "#status",
+                ondrop: function (element, target) {
+                    element.remove().appendTo(target);
+                }
+            });
+
+            var locator = Windows.Devices.Geolocation.Geolocator();
+            var promise = locator.getGeopositionAsync().then(
+                function (pos) {
+                    element.querySelector(".titlearea .pagetitle").textContent += " (" + pos.coordinate.latitude + ", " + pos.coordinate.longitude + ")";
+                });
         }
     })
 })();

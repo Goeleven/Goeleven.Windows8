@@ -97,9 +97,9 @@
         if (selectorForStatus.length > 0) {
             $(selectorForStatus).html('<p>Dragging: <span id="dragging">&nbsp;</span><br>Dropping: <span id="dropping">&nbsp;</span></p>');
         }
-        $(selectorForDraggables).unbind("MSPointerDown");
-        $(selectorForDraggables).unbind("MSPointerUp");
-        $(selectorForDraggables).live("MSPointerDown", function () {
+        $(selectorForDraggables).unbind("mousedown");
+        $(selectorForDraggables).unbind("touchstart");
+        $(selectorForDraggables).live("mousedown touchstart", function () {
             var now = new Date().getTime();
             // the first time this will make delta a negative number
             var lastTouch = $(this).data('lastTouch') || now + 1;
@@ -144,7 +144,7 @@
             return false;
         });
 
-        $(selectorForDropZones).live("MSPointerUp", function () {
+        $(selectorForDropZones).live("mouseup touchend", function () {
             var id = "#" + $(this).attr("id");
             clearTimeout($(currentDrag));
             if (lastClicked == currentDrag && isSecondClick && !$(id).hasClass(activeClass)) {
