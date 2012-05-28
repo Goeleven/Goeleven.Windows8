@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="12d12230-8926-48f8-b18a-1b5ad18364a7" Publisher="CN=yve.000" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>Goe Leven</DisplayName>
+    <PublisherDisplayName>Yves Goeleven</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+    <Description>Goeleven.Windows8</Description>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2</OSMinVersion>
+    <OSMaxVersionTested>6.2</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Goeleven.Windows8.App">
+      <VisualElements DisplayName="Goeleven.Windows8" Logo="Images\Logo.png" SmallLogo="Images\SmallLogo.png" Description="Goeleven.Windows8" ForegroundText="light" BackgroundColor="orange">
+        <LockScreen Notification="badgeAndTileText" BadgeLogo="Images\Badge.png" />
+        <DefaultTile ShowName="allLogos" WideLogo="Images\logowide.jpg" ShortName="Goe Leven" />
+        <SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="orange" />
+      </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="location" />
+  </Capabilities>
+</Package>

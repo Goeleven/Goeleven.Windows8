@@ -1,0 +1,89 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Goeleven.Windows8.Resources">
+    
+    <Style TargetType="Grid">
+        <Setter Property="Background" Value="#50FFFFFF" />
+    </Style>
+
+    <Style TargetType="TextBlock"  x:Name="PageTitleTextStyle">
+        <Setter Property="Foreground" Value="Orange" />
+        <Setter Property="FontFamily" Value="Segoe UI Light"/>
+        <Setter Property="FontWeight" Value="Thin" />
+        <Setter Property="Margin" Value="0, -40, 0, 0" />
+        <Setter Property="FontSize" Value="200" />
+    </Style>
+
+    <Style TargetType="Button" x:Name="SectionHeaderSTyle">
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="FontFamily" Value="Segoe UI Light"/>
+        <Setter Property="FontWeight" Value="Light" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="FontSize" Value="60" />
+        <Setter Property="BorderThickness" Value="0" />
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="TextBlockWallPosterStyle">
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="FontFamily" Value="Segoe WP Bold" />
+        <Setter Property="FontSize" Value="40" />
+        <Setter Property="Margin" Value="5" />
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="TextBlockWallMessageStyle">
+        <Setter Property="Foreground" Value="Gray" />
+        <Setter Property="Margin" Value="60,0,20,0" />
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="TextBlockWallNumberOfCommentsStyle">
+        <Setter Property="Foreground" Value="Orange" />
+        <Setter Property="Margin" Value="60,10,20,0" />
+    </Style>
+
+
+    <DataTemplate x:Key="Standard250x250ItemTemplate">
+        <Grid HorizontalAlignment="Left" Width="150" Height="150" >
+            <Border Background="{StaticResource ListViewItemPlaceholderRectBrush}">
+                <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                    <Grid Name="backgroundGrid" Width="150" Height="150" Visibility="Visible">
+                        <Rectangle Fill="#FFFFA500" Name="Rect" Visibility="Visible" />
+                        <Path Data="F1M491.29,218.796L491.29,242.195 506.643,242.195 506.643,222.446 521.088,222.446 521.088,242.27 535.783,242.27 535.783,218.647 513.864,199.123 491.29,218.796z M535.742,204.408L535.742,191.292 528.744,191.292 528.744,198.214 513.775,184.961 513.729,184.91 481.736,213.231 486.07,218.124 513.722,193.644 541.403,218.148 545.736,213.256 535.742,204.408z" Stretch="Uniform" Fill="#FFFFFFFF" Width="82" Height="82" Margin="0,0,0,0" />
+                    </Grid>
+                </Viewbox>
+            </Border>
+            <StackPanel VerticalAlignment="Bottom" Background="Transparent">
+                <TextBlock Text="{Binding Title}" Foreground="{StaticResource ListViewItemOverlayTextBrush}" Style="{StaticResource TitleTextStyle}" Height="40" Margin="15,0,15,0"/>
+            </StackPanel>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="StandardWallMessageTemplate">
+        <Grid HorizontalAlignment="Left" Width="600" Height="Auto" >
+            <Border>
+                <StackPanel  Margin="20,0,0,0" Width="580" Height="Auto" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image Grid.Row="0" Grid.Column="0" Stretch="None" Source="{Binding Image}" Margin="5"/>
+
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource TextBlockWallPosterStyle}" Width="500"/>
+
+                    </Grid>
+
+                    <TextBlock Text="{Binding Question}" TextWrapping="Wrap" Style="{StaticResource TextBlockWallMessageStyle}" Width="480"/>
+
+                    <TextBlock Text="{Binding  NumberOfComments}" TextWrapping="Wrap" Style="{StaticResource TextBlockWallNumberOfCommentsStyle}" Width="500"/>
+                </StackPanel>
+            </Border>           
+        </Grid>
+    </DataTemplate>
+
+</ResourceDictionary>
